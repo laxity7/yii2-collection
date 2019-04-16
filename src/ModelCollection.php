@@ -28,7 +28,7 @@ class ModelCollection extends Collection
      */
     public $query;
 
-    private $_models;
+    protected $_models;
 
 
     /**

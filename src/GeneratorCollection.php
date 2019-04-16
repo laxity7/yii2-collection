@@ -38,7 +38,7 @@ class GeneratorCollection extends Component implements \Iterator
     /**
      * @var BatchQueryResult
      */
-    private $_batch;
+    protected $_batch;
 
     public function __construct($query, $config = [])
     {
@@ -46,12 +46,12 @@ class GeneratorCollection extends Component implements \Iterator
         parent::__construct($config);
     }
 
-    private function queryEach()
+    protected function queryEach()
     {
         return $this->query->each(); // TODO inject DB
     }
 
-    private function ensureBatch()
+    protected function ensureBatch()
     {
         if ($this->_batch === null) {
             $this->_batch = $this->queryEach();

@@ -52,7 +52,7 @@ class Collection extends Component implements ArrayAccess, Iterator, Countable
     /**
      * @var array data contained in this collection.
      */
-    private $_data;
+    protected $_data;
 
 
     /**
@@ -603,7 +603,7 @@ class Collection extends Component implements ArrayAccess, Iterator, Countable
 
     // Iterator methods
 
-    private $_iteratorData;
+    protected $_iteratorData;
 
     /**
      * Return the current element
